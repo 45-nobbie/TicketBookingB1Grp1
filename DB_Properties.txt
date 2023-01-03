@@ -1,0 +1,67 @@
+Database Used - PostgresQL
+username - postgres
+password - ramji
+
+---------------------------------------------------------------------------------------
+
+CREATE TABLE accountprofile (
+   name varchar(255),
+   username varchar(255) PRIMARY KEY,
+   password varchar(255),
+   age integer,
+   address varchar(255),
+   phone varchar(255),
+   email varchar(255)
+);
+---------------------------------------------------------------------------------------
+CREATE TABLE ticket (
+   ticketid varchar(255) PRIMARY KEY,
+   ticketstatus varchar(255),
+   source varchar(255),
+   destination varchar(255),
+   hoursofjourney varchar(255),
+   price varchar(255),
+   route varchar(255),
+   passengername varchar(255),
+   passengerid varchar(255),
+   passengeraddress varchar(255),
+   passengerage varchar(255),
+   coupanapplied varchar(255),
+   feedback varchar(255)
+);
+-------------------------------------------------------------------------------------------
+CREATE TABLE vehicle (
+   vehicleid varchar(255) PRIMARY KEY,
+   vehicletype varchar(255),
+   source varchar(255),
+   destination varchar(255),
+   timetaken varchar(255),
+   price varchar(255),
+   departuretime varchar(255)
+);
+---------------------------------------------------------------
+INSERT INTO vehicle (vehicleid, vehicletype, source, destination, timetaken, price, departuretime)
+VALUES ('1', 'car', 'Delhi', 'Mumbai', '12 hours', '10000', '8:00 AM'),
+       ('2', 'bus', 'Delhi', 'Mumbai', '14 hours', '8000', '9:00 AM'),
+       ('3', 'train', 'Delhi', 'Mumbai', '16 hours', '6000', '10:00 AM'),
+       ('4', 'car', 'Delhi', 'Banglore', '20 hours', '12000', '11:00 AM'),
+       ('5', 'bus', 'Delhi', 'Banglore', '22 hours', '10000', '12:00 PM'),
+       ('6', 'car', 'Mumbai', 'Delhi', '12 hours', '10000', '8:00 AM'),
+       ('7', 'bus', 'Mumbai', 'Delhi', '14 hours', '8000', '9:00 AM'),
+       ('8', 'train', 'Mumbai', 'Delhi', '16 hours', '6000', '10:00 AM'),
+       ('9', 'car', 'Mumbai', 'Banglore', '20 hours', '12000', '11:00 AM'),
+       ('10', 'bus', 'Mumbai', 'Banglore', '22 hours', '10000', '12:00 PM'),
+       ('11', 'car', 'Banglore', 'Delhi', '12 hours', '10000', '8:00 AM'),
+       ('12', 'bus', 'Banglore', 'Delhi', '14 hours', '8000', '9:00 AM'),
+       ('13', 'train', 'Banglore', 'Delhi', '16 hours', '6000', '10:00 AM'),
+       ('14', 'car', 'Banglore', 'Mumbai', '20 hours', '12000', '11:00 AM'),
+       ('15', 'bus', 'Banglore', 'Mumbai', '22 hours', '10000', '12:00 PM'),
+       ('16', 'car', 'Delhi', 'Chennai', '12 hours', '10000', '8:00 AM'),
+       ('17', 'bus', 'Delhi', 'Chennai', '14 hours', '8000', '9:00 AM'),
+       ('18', 'train', 'Delhi', 'Chennai', '16 hours', '6000', '10:00 AM'),
+       ('19', 'car', 'Mumbai', 'Chennai', '20 hours', '12000', '11:00 AM'),
+       ('20', 'bus', 'Mumbai', 'Chennai', '22 hours', '10000', '12:00 PM'),
+       ('21', 'car', 'Banglore', 'Chennai', '12 hours', '10000', '8:00 AM'),
+       ('22', 'bus', 'Banglore', 'Chennai', '14 hours', '8000', '9:00 AM'),
+       ('23', 'train', 'Banglore', 'Chennai', '16 hours', '6000', '10:00 AM'),
+       ('24', 'car', 'Chennai', 'Delhi', '20 hours', '12000', '11:00 AM');
